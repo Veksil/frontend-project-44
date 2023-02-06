@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import questionAboutName from '../src/cli.js';
+import gameFirst from '../src/game-first.js';
 
-console.log('Welcome to the Brain Games!'); // print greating
-questionAboutName(); // questionAboutYourName
+questionAboutName; // questionAboutYourName
+gameFirst(questionAboutName)
