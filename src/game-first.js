@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-function gameFirst(namePlayer) {
+export function gameFirst(namePlayer) {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
@@ -30,4 +30,4 @@ function gameFirst(namePlayer) {
   }
 }
 
-export default gameFirst();
+// export default gameFirst();
