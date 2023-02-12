@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 export function getProgression(namePlayer) {
-  console.log("What number is missing in the progression?");
+  console.log('What number is missing in the progression?');
 
   function randomNumber(minValue, maxValue) {
     return Math.round(minValue + Math.random() * (maxValue - minValue));
@@ -10,7 +10,7 @@ export function getProgression(namePlayer) {
 
   for (let i = 0; i < 3; i += 1) {
     const lengthProgression = randomNumber(5, 15); // определение длины прогрессии от 5 до 15
-    let stepProgression = Math.round(Math.random() * 10); // определение шага прогрессии
+    const stepProgression = Math.round(Math.random() * 10); // определение шага прогрессии
     const progression = [];
     let numberInArrayProgression = stepProgression;
 
@@ -25,20 +25,20 @@ export function getProgression(namePlayer) {
     const hiddenNumber = progression[hiddenIndex];
 
     const correctAnswer = hiddenNumber;
-    progression[hiddenIndex] = "..";
+    progression[hiddenIndex] = '..';
 
-    const progressionInString = progression.join(" ");
+    const progressionInString = progression.join(' ');
 
     console.log(`Question: ${progressionInString}`);
 
-    const playerAnswer = readlineSync.question("Your answer: ");
+    const playerAnswer = readlineSync.question('Your answer: ');
 
     if (Number(playerAnswer) === correctAnswer) {
-      console.log("Correct");
+      console.log('Correct');
     } else {
       console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.
       Let's try again, ${namePlayer}!`);
-      break
+      break;
     }
 
     if (i === 2) {
