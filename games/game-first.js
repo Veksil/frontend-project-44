@@ -30,5 +30,3 @@ export function gameFirst(namePlayer) {
     }
   }
 }
-
-// export default gameFirst();
