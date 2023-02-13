@@ -1,4 +1,4 @@
-import { questionAboutName } from '../src/cli.js';
-import { getProgression } from '../games/brain-progression.js';
+import { getPlayerName } from '../src/cli.js';
+import { getProgression } from '../src/games/progression.js';
 
-getProgression(questionAboutName());
+getProgression(getPlayerName());

@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import readlineSync from 'readline-sync';
 
-export function questionAboutName() {
+export function getPlayerName() {
   console.log('Welcome to the Brain Games!'); // print greating
   console.log('May I have your name?');
 

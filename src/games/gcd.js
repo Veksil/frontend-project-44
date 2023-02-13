@@ -15,7 +15,7 @@ export function getGreatestCommonDivisor(namePlayer) {
     const maxValue = Math.max(numberOne, numberTwo);
     let correctAnswer = minValue;
 
-    while (flag === false) {
+    while (flag === false) {  // доработать механизм, считает не правильно
       if (maxValue % correctAnswer === 0 && minValue % correctAnswer === 0) {
         flag = true;
         break;

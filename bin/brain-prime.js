@@ -1,4 +1,4 @@
-import { questionAboutName } from '../src/cli.js';
-import { isPrimeNumber } from '../games/brain-prime.js';
+import { getPlayerName } from '../src/cli.js';
+import { isPrimeNumber } from '../src/games/prime.js';
 
-isPrimeNumber(questionAboutName());
+isPrimeNumber(getPlayerName());

@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import readlineSync from 'readline-sync';
 
-export function gameFirst(namePlayer) {
+export function isEven(namePlayer) {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {

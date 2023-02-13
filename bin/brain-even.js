@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { questionAboutName } from '../src/cli.js';
-import { gameFirst } from '../games/game-first.js';
+import { getPlayerName } from '../src/cli.js';
+import { isEven } from '../src/games/even.js';
 
-gameFirst(questionAboutName());
+isEven(getPlayerName());
