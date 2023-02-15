@@ -14,7 +14,7 @@ export function getProgression(namePlayer) {
     const progression = [];
     let numberInArrayProgression = stepProgression;
 
-    for (let i = 0; i < lengthProgression; i += 1) {
+    for (let j = 0; j < lengthProgression; j += 1) {
       // сбор прогрессии через стек, длина до 14 чисел
       progression.push(numberInArrayProgression);
       numberInArrayProgression += stepProgression;
