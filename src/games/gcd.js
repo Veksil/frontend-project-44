@@ -15,13 +15,14 @@ export function getGreatestCommonDivisor(namePlayer) {
     const maxValue = Math.max(numberOne, numberTwo);
     let correctAnswer = minValue;
 
-    while (flag === false) {  // доработать механизм, считает неправильно
+    while (flag === false) { 
       if (maxValue % correctAnswer === 0 && minValue % correctAnswer === 0) {
         flag = true;
         break;
       }
       correctAnswer -= 1;
     }
+    // доработать, считает неверно
     // console.log(correctAnswer); // проверка числа
 
     const playerAnswer = readlineSync.question('Your answer: ');
