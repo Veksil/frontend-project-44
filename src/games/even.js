@@ -5,27 +5,16 @@ export function isEven(namePlayer) {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
-    const randomNumber = Math.round(Math.random() * 100);
+    const randomNumber = Math.random() * 100;
+    const roundedNumber = Math.round(randomNumber);
 
-    console.log(`Question: ${randomNumber}`);
+    console.log(`Question: ${roundedNumber}`);
 
     const playerAnswer = readlineSync.question('Your answer: ');
 
-    const minDevisorEvenNumber = 1;
-    let checkEven = 'yes';
-
-    if (randomNumber < minDevisorEvenNumber) {
-      checkEven = 'no';
-      break;
-    } else {
-      let numberDivisor = Math.ceil(randomNumber / 2);
-      while (numberDivisor > minDevisorEvenNumber) {
-        if (randomNumber % numberDivisor === 0) {
-          checkEven = 'no';
-          break;
-        }
-        numberDivisor -= 1;
-      }
+    let checkEven = 'no';
+    if (roundedNumber % 2 === 0) {
+      checkEven = 'yes';
     }
 
     if (playerAnswer === checkEven) {
