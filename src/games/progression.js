@@ -9,18 +9,21 @@ export function getProgression(namePlayer) {
   }
 
   for (let i = 0; i < 3; i += 1) {
-    const lengthProgression = randomNumber(5, 15); // определение длины прогрессии от 5 до 15
-    const stepProgression = Math.round(Math.random() * 10); // определение шага прогрессии
+    let lengthProgression = Math.round(Math.random() * 10);
+    while (lengthProgression < 5) {
+      lengthProgression = Math.round(Math.random() * 10);
+    }
+
+    const stepProgression = Math.round(Math.random() * 10);
     const progression = [];
     let numberInArrayProgression = stepProgression;
 
     for (let j = 0; j < lengthProgression; j += 1) {
-      // сбор прогрессии через стек, длина до 14 чисел
       progression.push(numberInArrayProgression);
       numberInArrayProgression += stepProgression;
     }
 
-    const hiddenIndex = randomNumber(0, lengthProgression - 1); // индекс числа которое будет скрыто
+    const hiddenIndex = randomNumber(0, lengthProgression - 1);
 
     const hiddenNumber = progression[hiddenIndex];
 

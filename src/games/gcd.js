@@ -6,23 +6,26 @@ export function getGreatestCommonDivisor(namePlayer) {
 
   for (let i = 0; i < 3; i += 1) {
     const numberOne = Math.round(Math.random() * 100);
-    const numberTwo = Math.round(Math.random() * 100);
+    const numberTwo = 0;
+    const minNumber = 1;
 
-    console.log(`Question: ${numberOne} ${numberTwo}`);
+    
 
     let flag = false;
-    const minValue = Math.min(numberOne, numberTwo);
-    const maxValue = Math.max(numberOne, numberTwo);
+    const minValue = Math.min(minNumber, numberOne, numberTwo);
+    const maxValue = Math.max(minNumber, numberOne, numberTwo);
     let correctAnswer = minValue;
 
-    while (flag === false) { 
+    while (flag === false) {
       if (maxValue % correctAnswer === 0 && minValue % correctAnswer === 0) {
         flag = true;
         break;
       }
       correctAnswer -= 1;
     }
-    // доработать, считает неверно
+
+    console.log(`Question: ${minValue} ${maxValue}`);
+
     // console.log(correctAnswer); // проверка числа
 
     const playerAnswer = readlineSync.question('Your answer: ');
