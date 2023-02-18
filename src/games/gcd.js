@@ -5,28 +5,24 @@ export function getGreatestCommonDivisor(namePlayer) {
   console.log('Find the greatest common divisor of given numbers.');
 
   for (let i = 0; i < 3; i += 1) {
-    const numberOne = Math.round(Math.random() * 100);
-    const numberTwo = Math.round(Math.random() * 100);
-    const minNumber = 1;
-
-    
+    const minDevider = 1;
+    const numberOne = Math.round(Math.random() * 100) + minDevider;
+    const numberTwo = Math.round(Math.random() * 100) + minDevider;
 
     let flag = false;
-    const minValue = Math.min(minNumber, numberOne, numberTwo);
-    const maxValue = Math.max(minNumber, numberOne, numberTwo);
-    let correctAnswer = minValue;
+    let correctAnswer = Math.min(numberOne, numberTwo);
 
     while (flag === false) {
-      if (maxValue % correctAnswer === 0 && minValue % correctAnswer === 0) {
+      if (numberOne % correctAnswer === 0 && numberTwo % correctAnswer === 0) {
         flag = true;
         break;
       }
       correctAnswer -= 1;
     }
 
-    console.log(`Question: ${minValue} ${maxValue}`);
-
     // console.log(correctAnswer); // проверка числа
+
+    console.log(`Question: ${numberOne} ${numberTwo}`);
 
     const playerAnswer = readlineSync.question('Your answer: ');
 
