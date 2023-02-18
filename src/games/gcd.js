@@ -6,7 +6,7 @@ export function getGreatestCommonDivisor(namePlayer) {
 
   for (let i = 0; i < 3; i += 1) {
     const numberOne = Math.round(Math.random() * 100);
-    const numberTwo = 0;
+    const numberTwo = Math.round(Math.random() * 100);
     const minNumber = 1;
 
     
