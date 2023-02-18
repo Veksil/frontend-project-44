@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import readlineSync from 'readline-sync';
+import { randomNumber, getPlayerAnswer } from '../utils.js';
 
 export function isPrimeNumber(namePlayer) {
   for (let i = 0; i < 3; i += 1) {
@@ -7,23 +7,23 @@ export function isPrimeNumber(namePlayer) {
       'Answer "yes" if given number is prime. Otherwise answer "no".',
     );
 
-    const randomNumber = Math.round(Math.random() * 100);
+    const number = randomNumber();
     let correctAnswer = 'yes';
 
-    if (randomNumber < 2) {
+    if (number < 2) {
       correctAnswer = 'no';
     } else {
-      let divider = Math.ceil(randomNumber / 2);
+      let divider = Math.ceil(number / 2);
       for (divider; divider > 1; divider -= 1) {
-        if (randomNumber % divider === 0) {
+        if (number % divider === 0) {
           correctAnswer = 'no';
           break;
         }
       }
     }
-    console.log(`Question: ${randomNumber}`);
+    console.log(`Question: ${number}`);
 
-    const playerAnswer = readlineSync.question('Your answer: ');
+    const playerAnswer = getPlayerAnswer();
 
     if (playerAnswer === correctAnswer) {
       console.log('Correct');

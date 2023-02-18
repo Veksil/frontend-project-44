@@ -1,13 +1,13 @@
 /* eslint-disable import/prefer-default-export */
-import readlineSync from 'readline-sync';
+import { randomNumber, getPlayerAnswer } from '../utils.js';
 
 export function getGreatestCommonDivisor(namePlayer) {
   console.log('Find the greatest common divisor of given numbers.');
 
   for (let i = 0; i < 3; i += 1) {
     const minDevider = 1;
-    const numberOne = Math.round(Math.random() * 100) + minDevider;
-    const numberTwo = Math.round(Math.random() * 100) + minDevider;
+    const numberOne = randomNumber() + minDevider;
+    const numberTwo = randomNumber() + minDevider;
 
     let flag = false;
     let correctAnswer = Math.min(numberOne, numberTwo);
@@ -24,9 +24,9 @@ export function getGreatestCommonDivisor(namePlayer) {
 
     console.log(`Question: ${numberOne} ${numberTwo}`);
 
-    const playerAnswer = readlineSync.question('Your answer: ');
+    const playerAnswer = Number(getPlayerAnswer());
 
-    if (Number(playerAnswer) === correctAnswer) {
+    if (playerAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.

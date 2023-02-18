@@ -1,12 +1,12 @@
 /* eslint-disable import/prefer-default-export */
-import readlineSync from 'readline-sync';
+import { randomNumber, getPlayerAnswer } from '../utils.js';
 
-export function calculator(namePlayer = 'безымянный воин') {
+export function calculator(namePlayer) {
   console.log('What is the result of the expression?');
 
   for (let i = 0; i < 3; i += 1) {
-    const firstNumber = Math.round(Math.random() * 100);
-    const secondNumber = Math.round(Math.random() * 100);
+    const firstNumber = randomNumber();
+    const secondNumber = randomNumber();
     const listValue = ['+', '-', '*'];
     const randomNumberForValue = Math.floor(Math.random() * listValue.length);
     const randomValue = listValue[randomNumberForValue];
@@ -22,9 +22,9 @@ export function calculator(namePlayer = 'безымянный воин') {
       correctAnswer = firstNumber * secondNumber;
     }
 
-    const playerAnswer = readlineSync.question('Your answer: ');
+    const playerAnswer = Number(getPlayerAnswer());
 
-    if (Number(playerAnswer) === correctAnswer) {
+    if (playerAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.

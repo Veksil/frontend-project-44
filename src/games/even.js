@@ -1,26 +1,25 @@
 /* eslint-disable import/prefer-default-export */
-import readlineSync from 'readline-sync';
+import { randomNumber, getPlayerAnswer } from '../utils.js';
 
 export function isEven(namePlayer) {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
-    const randomNumber = Math.random() * 100;
-    const roundedNumber = Math.round(randomNumber);
+    const number = randomNumber();
 
-    console.log(`Question: ${roundedNumber}`);
+    console.log(`Question: ${number}`);
 
-    const playerAnswer = readlineSync.question('Your answer: ');
+    const playerAnswer = getPlayerAnswer();
 
-    let checkEven = 'no';
-    if (roundedNumber % 2 === 0) {
-      checkEven = 'yes';
+    let correctAnswer = 'no';
+    if (number % 2 === 0) {
+      correctAnswer = 'yes';
     }
 
-    if (playerAnswer === checkEven) {
+    if (playerAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${checkEven}.
+      console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.
         Let's try again, ${namePlayer}!`);
       break;
     }

@@ -1,20 +1,16 @@
 /* eslint-disable import/prefer-default-export */
-import readlineSync from 'readline-sync';
+import { randomNumberForProgressionGame, randomNumberInRange, getPlayerAnswer } from '../utils.js';
 
 export function getProgression(namePlayer) {
   console.log('What number is missing in the progression?');
 
-  function randomNumber(minValue, maxValue) {
-    return Math.round(minValue + Math.random() * (maxValue - minValue));
-  }
-
   for (let i = 0; i < 3; i += 1) {
-    let lengthProgression = Math.round(Math.random() * 10);
+    let lengthProgression = 0;
     while (lengthProgression < 5) {
-      lengthProgression = Math.round(Math.random() * 10);
+      lengthProgression = randomNumberForProgressionGame();
     }
 
-    const stepProgression = Math.round(Math.random() * 10);
+    const stepProgression = randomNumberForProgressionGame();
     const progression = [];
     let numberInArrayProgression = stepProgression;
 
@@ -23,7 +19,7 @@ export function getProgression(namePlayer) {
       numberInArrayProgression += stepProgression;
     }
 
-    const hiddenIndex = randomNumber(0, lengthProgression - 1);
+    const hiddenIndex = randomNumberInRange(0, lengthProgression - 1);
 
     const hiddenNumber = progression[hiddenIndex];
 
@@ -34,9 +30,9 @@ export function getProgression(namePlayer) {
 
     console.log(`Question: ${progressionInString}`);
 
-    const playerAnswer = readlineSync.question('Your answer: ');
+    const playerAnswer = Number(getPlayerAnswer());
 
-    if (Number(playerAnswer) === correctAnswer) {
+    if (playerAnswer === correctAnswer) {
       console.log('Correct');
     } else {
       console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.
