@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { getPlayerName } from '../src/cli.js';
-import { calculator } from '../src/games/calc.js';
+import gameEngine from '../src/gameEngine.js';
+import calculator from '../src/games/calc.js';
 
-calculator(getPlayerName());
+gameEngine(calculator);

@@ -1,14 +1,12 @@
-import { calculator } from "./games/calc.js";
-import { getPlayerName } from "./cli.js";
+import questionAboutPlayerName from "./cli.js";
 import { getPlayerAnswer } from "./utils.js";
 
-// eslint-disable-next-line import/prefer-default-export
-export function gameEngine() {
-  const namePlayer = getPlayerName();
+function gameEngine(game) {
+  const namePlayer = questionAboutPlayerName();
 
   for (let i = 0; i < 3; i += 1) {
-    const correctAnswer = calculator();
-    const playerAnswer = Number(getPlayerAnswer());
+    const correctAnswer = String(game());
+    const playerAnswer = getPlayerAnswer();
 
     if (playerAnswer === correctAnswer) {
       console.log("Correct");
@@ -20,3 +18,5 @@ export function gameEngine() {
   }
   console.log(`Congratulations, ${namePlayer}!`);
 }
+
+export default gameEngine

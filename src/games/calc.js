@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-// import { gameLogic } from "../gameLogic.js";
 import { randomNumber } from '../utils.js';
 
 export function calculator() {
@@ -23,3 +21,5 @@ export function calculator() {
   }
   return correctAnswer;
 }
+
+export default calculator;

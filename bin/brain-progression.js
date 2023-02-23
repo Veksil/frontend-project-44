@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { getPlayerName } from '../src/cli.js';
-import { getProgression } from '../src/games/progression.js';
+import gameEngine from '../src/gameEngine.js';
+import getProgression from '../src/games/progression.js';
 
-getProgression(getPlayerName());
+gameEngine(getProgression);

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { getPlayerName } from '../src/cli.js';
-import { isPrimeNumber } from '../src/games/prime.js';
+import gameEngine from '../src/gameEngine.js';
+import isPrimeNumber from '../src/games/prime.js';
 
-isPrimeNumber(getPlayerName());
+gameEngine(isPrimeNumber);

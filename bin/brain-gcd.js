@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { getPlayerName } from '../src/cli.js';
-import { getGreatestCommonDivisor } from '../src/games/gcd.js';
+import gameEngine from '../src/gameEngine.js';
+import gcd from '../src/games/gcd.js';
 
-getGreatestCommonDivisor(getPlayerName());
+gameEngine(gcd);

@@ -1,8 +1,7 @@
-/* eslint-disable import/prefer-default-export */
 import readlineSync from 'readline-sync';
 
-export function getPlayerName() {
-  console.log('Welcome to the Brain Games!'); // print greating
+function questionAboutPlayerName() {
+  console.log('Welcome to the Brain Games!');
   console.log('May I have your name?');
 
   const namePlayer = readlineSync.question('Your answer: ');
@@ -12,4 +11,4 @@ export function getPlayerName() {
   return namePlayer;
 }
 
-// export default questionAboutName();
+export default questionAboutPlayerName;
