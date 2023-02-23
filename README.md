@@ -20,7 +20,7 @@
 #### greeting demonstration
 - `command: brain-games`
 
-<a  href="https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7"  target="_blank"><img  src="https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg"  /></a>
+<a href="https://asciinema.org/a/iBj0OLbHWScpxKprSWuMrn3d6" target="_blank"><img src="https://asciinema.org/a/iBj0OLbHWScpxKprSWuMrn3d6.svg" /></a>
 
 #
 
