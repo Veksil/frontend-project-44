@@ -1,4 +1,4 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 export function randomNumber() {
   return Math.round(Math.random() * 100);
@@ -13,5 +13,5 @@ export function randomNumberForProgressionGame() {
 }
 
 export function getPlayerAnswer() {
-  return readlineSync.question("Your answer: ");
+  return readlineSync.question('Your answer: ');
 }
