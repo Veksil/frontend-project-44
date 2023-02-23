@@ -1,14 +1,58 @@
+# Welcome guest :wave:
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Veksil/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Veksil/frontend-project-44/actions)
 
-<a href="https://codeclimate.com/github/Veksil/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/af52828f245d374e0688/maintainability" /></a>
+### Welcome to Brain Games
 
-<a href="https://asciinema.org/a/upAMWcZmO9Uk3LQYoelamikNr" target="_blank"><img src="https://asciinema.org/a/upAMWcZmO9Uk3LQYoelamikNr.svg" /></a>
+#### This project allows you to play 5 simple math games
 
-<a href="https://asciinema.org/a/smEkLG7v1BtpgokQDq4c9ESXH" target="_blank"><img src="https://asciinema.org/a/smEkLG7v1BtpgokQDq4c9ESXH.svg" /></a>
+#
 
-<a href="https://asciinema.org/a/pT2bRWLQseEexb9MTOaiMhVCq" target="_blank"><img src="https://asciinema.org/a/pT2bRWLQseEexb9MTOaiMhVCq.svg" /></a>
+##### :computer: To install the project on your PC, create a separate folder and enter in the console:
 
-<a href="https://asciinema.org/a/QyT3sPBz9n6mN2qT4aRFaO9lz" target="_blank"><img src="https://asciinema.org/a/QyT3sPBz9n6mN2qT4aRFaO9lz.svg" /></a>
+-  `git clone git@github.com:Veksil/frontend-project-44.git`
+-  `make install`
+  
+#
 
-<a href="https://asciinema.org/a/iGLPM2Y3wZMueZD5l4G5WGmwH" target="_blank"><img src="https://asciinema.org/a/iGLPM2Y3wZMueZD5l4G5WGmwH.svg" /></a>
+#### greeting demonstration
+- command: brain-games
+
+<a  href="https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7"  target="_blank"><img  src="https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg"  /></a>
+
+#
+
+#### first game - even number?
+- command: brain-even
+
+<a  href="https://asciinema.org/a/GGPD1Keqy7hOO6yzq3HoyfQ41"  target="_blank"><img  src="https://asciinema.org/a/GGPD1Keqy7hOO6yzq3HoyfQ41.svg"  /></a>
+
+  
+#
+
+#### second game - calculator (+, -, *)
+- command: brain-calc
+
+<a  href="https://asciinema.org/a/PLSe6Di8P08kpPiHcCeFMAjwc"  target="_blank"><img  src="https://asciinema.org/a/PLSe6Di8P08kpPiHcCeFMAjwc.svg"  /></a>
+
+#
+
+#### third game - find greatest common divisor
+- command: brain-gcd
+
+<a  href="https://asciinema.org/a/dpK9LKvJudiqNxLwf4vdxsXh9"  target="_blank"><img  src="https://asciinema.org/a/dpK9LKvJudiqNxLwf4vdxsXh9.svg"  /></a>
+
+#
+
+#### fourth game - progression
+- command: brain-progression
+
+<a  href="https://asciinema.org/a/QjnTvshVznnjnvDm7eYRIjH6l"  target="_blank"><img  src="https://asciinema.org/a/QjnTvshVznnjnvDm7eYRIjH6l.svg"  /></a>
+
+#
+
+#### fifth game - is prime number?
+- command: brain-prime
+
+<a  href="https://asciinema.org/a/AgpOQgWgvj6vnnvn0Swi0NjrZ"  target="_blank"><img  src="https://asciinema.org/a/AgpOQgWgvj6vnnvn0Swi0NjrZ.svg"  /></a>
