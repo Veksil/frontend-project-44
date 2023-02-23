@@ -1,5 +1,5 @@
-import questionAboutPlayerName from "./cli.js";
-import { getPlayerAnswer } from "./utils.js";
+import questionAboutPlayerName from './cli.js';
+import { getPlayerAnswer } from './utils.js';
 
 function gameEngine(game) {
   const namePlayer = questionAboutPlayerName();
@@ -9,7 +9,7 @@ function gameEngine(game) {
     const playerAnswer = getPlayerAnswer();
 
     if (playerAnswer === correctAnswer) {
-      console.log("Correct");
+      console.log('Correct');
     } else {
       console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.
           Let's try again, ${namePlayer}!`);
@@ -19,4 +19,4 @@ function gameEngine(game) {
   console.log(`Congratulations, ${namePlayer}!`);
 }
 
-export default gameEngine
+export default gameEngine;
