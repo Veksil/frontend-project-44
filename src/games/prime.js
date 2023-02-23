@@ -3,21 +3,21 @@ import { randomNumber } from '../utils.js';
 function isPrimeNumber() {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
-  const number = randomNumber();
+  const numberToCheck = randomNumber();
   let correctAnswer = 'yes';
 
-  if (number < 2) {
+  if (numberToCheck < 2) {
     correctAnswer = 'no';
   } else {
-    let divider = Math.ceil(number / 2);
+    let divider = Math.ceil(numberToCheck / 2);
     for (divider; divider > 1; divider -= 1) {
-      if (number % divider === 0) {
+      if (numberToCheck % divider === 0) {
         correctAnswer = 'no';
         break;
       }
     }
   }
-  console.log(`Question: ${number}`);
+  console.log(`Question: ${numberToCheck}`);
 
   return correctAnswer;
 }

@@ -18,7 +18,7 @@ export function getGreatestCommonDivisor() {
     correctAnswer -= 1;
   }
 
-  console.log(correctAnswer); // проверка числа
+  // console.log(correctAnswer); // проверка числа
 
   console.log(`Question: ${numberOne} ${numberTwo}`);
 
